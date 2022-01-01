@@ -15,13 +15,29 @@ void solve()
       sum += x;
       v.push_back(x);
    }
+
    int steps = 0;
    if (sum <= k)
-      cout << steps;
+      cout << steps<<endl;
    else
    {
-      auto min = min_element(v.begin(), v.end());
-      auto max = max_element(v.begin(), v.end());
+      sort(v.begin(), v.end());
+      while (v[0] <k)
+      {
+         v[0]--;
+         sum--;
+         steps++;
+      }
+      int i = n;
+      while (i--)
+      {
+         v[i] = v[0];
+         sum -= (v[i] + v[0]);
+         if (sum <= k)
+            break;
+         steps++;
+      }
+      cout << steps << endl;
    }
 }
 int main()
