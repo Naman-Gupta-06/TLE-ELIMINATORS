@@ -33,6 +33,9 @@ vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i
  
 void solve()
 {
+    string s;
+    cin>>s;
+    
 
 }
 int main()

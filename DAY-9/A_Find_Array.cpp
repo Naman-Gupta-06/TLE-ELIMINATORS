@@ -33,12 +33,11 @@ vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i
  
 void solve()
 {
+    
 
 }
 int main()
 {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
 int t;
 cin>>t;
 while(t--)solve();

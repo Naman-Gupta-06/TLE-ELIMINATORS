@@ -33,14 +33,19 @@ vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i
  
 void solve()
 {
+    int a,b,c;
+    cin>>a>>b>>c;
+    int v3=a*b*c;
+    int v5=a*(b+c);
+    int v6=(a+b)*c;
+    cout<<max(v1,max(v2,max(v3,max(v5,v6))))<<endl;;
+
 
 }
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-int t;
-cin>>t;
-while(t--)solve();
+solve();
 return 0;
 }

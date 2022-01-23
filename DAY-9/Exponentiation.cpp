@@ -30,9 +30,22 @@ ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) %
 ll mod_sub(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a - b) % m) + m) % m;}
 vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i = 2; i <= n; i++)if (arr[i] == 0) {vect.push_back(i); for (int j = 2 * i; j <= n; j += i)arr[j] = 1;} return vect;}
 /*--------------------------------------------------------------------------------------------------------------------------*/
+
+ll expo(int a, int b){
+    if(b==1)return a;
+        ll ex=1;
+    if(b%2==0){
+        ex=(expo(a,b/2)%MOD);
+        return ex*ex;
+    }else  return (a*ex*ex)%MOD;
+}
+
  
 void solve()
 {
+    ll a,b;
+    cin>>a>>b;
+    cout<<expo(a,b)<<endl;
 
 }
 int main()

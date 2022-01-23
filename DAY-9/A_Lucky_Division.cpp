@@ -33,14 +33,27 @@ vector<ll> sieve(int n) {int*arr = new int[n + 1](); vector<ll> vect; for (int i
  
 void solve()
 {
+    string n;
+    cin>>n;
+    string ans="NO";
+    int num=stoi(n);
+    if(num%4==0 ||num%7==0 ||num%47==0)ans="YES";
+    else {
+    for(auto x:n){
+        if(x=='4'||x=='7')ans="YES";
+        else{
+            ans="NO";break;
+        }
+    }
+
+    }
+    cout<<ans<<endl;
 
 }
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-int t;
-cin>>t;
-while(t--)solve();
+solve();
 return 0;
 }

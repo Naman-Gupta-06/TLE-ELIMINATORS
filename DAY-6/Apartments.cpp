@@ -43,25 +43,6 @@ for(int i=0;i<m;i++)cin>>b[i];
 sort(a,a+n);
 sort(b,b+m);
 
-int cnt=0;
-
-int ind=0;
-int j=ind;
-for(int i=0;i<n;i++){
-    int l=a[i]-k;
-    int r=a[i]+k;
-     j=ind;
-    while(j<m){
-        if(b[j]!=-1 && b[j]>=l &&b[j]<=r){
-            b[j]=-1;
-            cnt++;
-            break;
-        }
-        j++;
-        if(b[j]<l)ind++;
-    }
-}
-cout<<cnt<<endl;
 
 
 
